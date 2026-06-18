@@ -15,6 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
         'audio-gallery': document.getElementById('audio-gallery')
     };
 
+    // Configurar el segundo exacto donde debe empezar cada canción para saltar las introducciones largas
+    const audioStartTimes = {
+        'audio-interstellar': 0,    // Desde el inicio
+        'audio-letter': 5,          // Río Roma (salta 5 seg)
+        'audio-story': 25,          // Humbe (salta 25 seg de intro)
+        'audio-reasons': 15,        // Kevin Kaarl (salta 15 seg)
+        'audio-gallery': 5          // Río Roma
+    };
+
     let currentAudioId = '';
 
     function playAudio(audioId) {
@@ -24,13 +33,16 @@ document.addEventListener('DOMContentLoaded', () => {
         Object.values(allAudios).forEach(audio => {
             if (audio) {
                 audio.pause();
-                audio.currentTime = 0; 
+                // No lo reiniciamos a 0 aquí, porque lo ajustamos al reproducir
             }
         });
 
         // Reproducir el nuevo
         const newAudio = allAudios[audioId];
         if (newAudio) {
+            // Adelantar la canción al segundo configurado
+            newAudio.currentTime = audioStartTimes[audioId] || 0;
+            
             newAudio.play().catch(e => console.log("Error al reproducir audio local:", e));
             currentAudioId = audioId;
         }
