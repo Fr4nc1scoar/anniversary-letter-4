@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Etiquetas Open Graph para vista previa bonita en WhatsApp -->
+    <meta property="og:title" content="Feliz 4to Aniversario, Mi Amor ❤️">
+    <meta property="og:description" content="Una carta digital interactiva muy especial para el amor de mi vida...">
+    <meta property="og:image" content="/assets/images/preview.png">
+    <meta property="og:type" content="website">
+
+    <title>Feliz 4to Aniversario, Mi Amor ❤️</title>
+    <!-- Fuentes elegantes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- REPRODUCTORES DE AUDIO LOCALES -->
+    <audio id="audio-interstellar" src="assets/music/interstellar.mp3" loop></audio>
+    <audio id="audio-letter" src="assets/music/rio_roma.mp3" loop></audio>
+    <audio id="audio-story" src="assets/music/humbe.mp3" loop></audio>
+    <audio id="audio-reasons" src="assets/music/kevin_kaarl.mp3" loop></audio>
+    <audio id="audio-gallery" src="assets/music/rio_roma.mp3" loop></audio>
+
+    <!-- Corazones de fondo visibles en todas las pantallas -->
+    <div id="hearts-container"></div>
+
+    <!-- PANTALLA PREVIA PARA PERMITIR AUDIO -->
+    <div id="click-to-start" class="start-overlay">
+        <h1 class="dancing-title gold-text pulse-text">Toca la pantalla para comenzar...</h1>
+    </div>
+
+    <!-- PANTALLA 0: EL SOBRE (Inicio) -->
+    <section id="view-envelope" class="view active-view">
+        <div class="envelope-container" id="open-envelope-btn">
+            <p class="intro-text text-center gold-text" id="intro-text-element">Bueno amor hoy por nuestro 4 aniversario quise hacer algo distinto bonito y especial. a pesar de estar ocupado me tome el tiempo de crear este pequeño detallito espero te guste mi amor.</p>
+            <h2 class="envelope-hint dancing-title">Toca el sobre, mi amor...</h2>
+            <div class="envelope">
+                <div class="flap"></div>
+                <div class="body"></div>
+                <div class="wax-seal">❤️</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PANTALLA 1: LA CARTA -->
+    <section id="view-letter" class="view hidden-view">
+        <div class="content-wrapper">
+            <div class="elegant-card letter-card">
+                <div class="gold-border">
+                    <h1 class="dancing-title gold-text text-center">Feliz 4to Aniversario</h1>
+                    <h3 class="subtitle text-center">18 de Julio</h3>
+                    <hr class="elegant-hr">
+                    
+                    <div class="letter-text">
+                        <p>Feliz aniversario mi amor, te amo inmensamente no sabes lo feliz que me haces, agradezco a Dios por permitirnos estar juntos un año más, 4 años de esta hermosa relación, lleno de tantos momentos hermosos así como también días duros, pero que nos han permitido madurar como personas y fortalecer nuestra relación aún más.</p>
+                        <p>Me siento feliz de cada cosa que te he visto lograr y mejorar en el tiempo que nos conocemos, cómo has crecido. Te amo demasiado mi amor, estoy muy orgulloso de ti y de la mujer que eres y en la que sé que te convertirás, te amo muchooo.</p>
+                        <p>Amo tu risa y me encantaría verla en tu cara todos los días, amo tu pelo, tu olor, tus ojos, tu calor, amo abrazarte, dormir contigo, despertar contigo. Quiero que seamos felices juntos y Dios nos permita seguir creciendo y mejorando todas esas cosas que sabemos que fallamos.</p>
+                        <p>Espero seguir creciendo contigo y seguir viviendo momentos únicos a tu lado, gracias por todo tu amor, por todo el cariño que a pesar de no demostrarlo tanto sé que me amas como yo a ti.</p>
+                        <p>Feliz 4 aniversarios y que sean 1000. Eres el amor de mi vida y por ti lo intento todos los días y si no funciona hago que funcione. Todo por ti amor.</p>
+                        <p class="signature dancing-title">Att tu novio que te ama mucho ❤️</p>
+                    </div>
+
+                    <div class="navigation-bottom">
+                        <p class="nav-hint">Sigue explorando nuestra historia...</p>
+                        <div class="nav-buttons">
+                            <button class="nav-btn" data-target="view-story" data-audio="audio-story">Nuestra Historia</button>
+                            <button class="nav-btn" data-target="view-reasons" data-audio="audio-reasons">Razones para Amarte</button>
+                            <button class="nav-btn" data-target="view-gallery" data-audio="audio-gallery">Galería de Recuerdos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PANTALLA 2: NUESTRA HISTORIA -->
+    <section id="view-story" class="view hidden-view">
+        <div class="content-wrapper">
+            <button class="back-btn" data-target="view-letter" data-audio="audio-letter">← Volver a la Carta</button>
+            <h2 class="section-title dancing-title gold-text text-center">Donde todo comenzó</h2>
+            
+            <div class="elegant-timeline">
+                <div class="timeline-box">
+                    <h3 class="cinzel-title">El día que te vi</h3>
+                    <div class="date-badge">Amor de redes sociales</div>
+                    <p>Me encanta el inicio de nuestra historia y siempre me parece cómico desde el primer mensaje por Facebook, después de tanto coqueteo notificacional y tantas interacciones asjas, donde sentí inmediatamente que conectamos e hicimos click. Luego de esa larga conversación por WhatsApp y el nerviosismo que sentí en invitarte a salir por primera vez... Todo se sintió tan bonito, me enamoré de ti porque sentí que realmente encajamos de alguna manera a pesar de ser tan distintos. Me encanta que haya sucedido.</p>
+                </div>
+
+                <div class="timeline-box">
+                    <h3 class="cinzel-title">Nuestra primera cita</h3>
+                    <div class="date-badge">Las más ricas tetas ajasjd</div>
+                    <p>Después de tanto tiempo y luego de armarme de gran valor, por tantos nervios, dudas y miedo al rechazo, me animé a invitarte a salir. No tenía mucho pero sí ganas, ingenio y la intención de verte. Nuestra cita, una idea sencilla para muchos, pero para mí fue la cita perfecta: una invitación a comer tetas jajasj. Desde que te vi llegar a la plaza mi corazón se aceleró, el nerviosismo se me notaba al no saber qué decir mientras caminábamos al lugar, pero al llegar y comenzar a hablar siento que nuevamente todo fluyó, me sentí cómodo y abierto a conversar de lo que sea contigo amor, y hasta el día de hoy sigue siendo así. Me sigo riendo cada vez que me acuerdo que se te cayó el helado JAJSASJAS. Te amo mi amooor.</p>
+                </div>
+
+                <div class="timeline-box">
+                    <h3 class="cinzel-title">Nuestro primer beso</h3>
+                    <div class="date-badge">Fortín de la Caranta</div>
+                    <p>Hablando de besos, el nuestro creo que fue mágico, un mejor ambiente no pudo haber existido, siento que el mundo conspiró a nuestro favor para colocar la atmósfera perfecta. El momento perfecto se dio: subimos al mirador la noche, las estrellas, el mar tranquilo... mirar el anochecer fue todo muy lindo. Al momento los dos sentados uno al lado del otro en silencio con el mar de fondo, me acerqué lentamente a ti y te miré a los ojos, noté tu nerviosismo también, me acerqué rápida y torpemente, y de esa manera se unieron nuestros labios en un fugaz pero gran beso. Para mí uno de los mejores que nos hemos dado. A pesar de tus nervios y el esconderte rápidamente en mi pecho de la vergüenza, me pareció lo más lindo del mundo. En ese momento terminé de caer perdidamente enamorado a tus pies, me encanta lo romántico que fue y espero revivir ese primer amor otra vez para seguir besándonos con el mismo sentimiento por el resto de mis días.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PANTALLA 3: RAZONES PARA AMARTE -->
+    <section id="view-reasons" class="view hidden-view">
+        <div class="content-wrapper">
+            <button class="back-btn" data-target="view-letter" data-audio="audio-letter">← Volver a la Carta</button>
+            <h2 class="section-title dancing-title gold-text text-center">40 Razones por las que te amo</h2>
+            
+            <div class="reasons-list" id="reasons-list-container">
+                <!-- Se llenan por Javascript para no saturar el HTML -->
+            </div>
+        </div>
+    </section>
+
+    <!-- PANTALLA 4: GALERÍA -->
+    <section id="view-gallery" class="view hidden-view">
+        <div class="content-wrapper">
+            <button class="back-btn" data-target="view-letter" data-audio="audio-letter">← Volver a la Carta</button>
+            <h2 class="section-title dancing-title gold-text text-center">Nuestros Recuerdos</h2>
+            
+            <div class="gallery-grid" id="gallery-grid-container">
+                <!-- Se llenan dinámicamente por JS -->
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
